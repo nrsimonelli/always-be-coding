@@ -16,13 +16,13 @@
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 84 76% 62%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 246 100% 62%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -80,16 +80,17 @@
   @font-face {
     font-family: 'Unbounded';
     font-style: normal;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-display: swap;
-    src: url('/src/fonts/Unbounded-VariableFont_wght.ttf') format('truetype');
+    src: url('/src/assets/fonts/Unbounded-VariableFont_wght.ttf')
+      format('truetype');
   }
   @font-face {
     font-family: 'Gasoek';
     font-style: normal;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-display: swap;
-    src: url('/src/fonts/GasoekOne-Regular.ttf') format('truetype');
+    src: url('/src/assets/fonts/GasoekOne-Regular.ttf') format('truetype');
   }
   * {
     @apply border-border;
@@ -99,8 +100,5 @@
   }
   html {
     @apply scroll-smooth font-unbounded;
-  }
-  section {
-    @apply bg-primary/10;
   }
 }
