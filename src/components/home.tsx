@@ -1,8 +1,9 @@
+import { Hero } from '@/components/hero'
+
 export const Home = () => {
   return (
-    <main>
-      <section>hero</section>
-      <section>tech</section>
+    <main className='transition-all duration-1000 overflow-x-clip'>
+      <Hero />
       <section>about</section>
       <section>work</section>
       <section>projects</section>
