@@ -77,6 +77,20 @@
   }
 }
 @layer base {
+  @font-face {
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/src/fonts/Unbounded-VariableFont_wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Gasoek';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/src/fonts/GasoekOne-Regular.ttf') format('truetype');
+  }
   * {
     @apply border-border;
   }
@@ -84,7 +98,7 @@
     @apply bg-background text-foreground;
   }
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth font-unbounded;
   }
   section {
     @apply bg-primary/10;
