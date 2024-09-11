@@ -1,7 +1,10 @@
 import { Hero } from '@/components/hero'
 import { ZapIcon } from '@/components/ui/zap-icon'
+import { TECH_STACK } from './tech-stack'
 
 export const Home = () => {
+  const exp = false
+
   return (
     <main className='transition-all duration-1000 overflow-x-clip'>
       <Hero />
@@ -18,7 +21,15 @@ export const Home = () => {
         </div>
       </div>
 
-      <section>about</section>
+      <section>
+        <div className='flex flex-row flex-wrap items-center justify-center gap-2 mt-4'>
+          {TECH_STACK.map((tech) => (
+            <a href={tech.url} target='_blank' rel='noreferrer noopener'>
+              <tech.icon ogColor={exp} className='w-40 h-40' />
+            </a>
+          ))}
+        </div>
+      </section>
       <section>work</section>
       <section>projects</section>
       <section>contact</section>
