@@ -1,9 +1,22 @@
-import { Hero } from '@/components/hero'
+import { Hero, ZapIcon } from '@/components/hero'
 
 export const Home = () => {
   return (
     <main className='transition-all duration-1000 overflow-x-clip'>
       <Hero />
+      <div className='w-full h-20 -translate-y-1/2 bg-foreground text-background'>
+        <div className='flex flex-row items-center h-full space-x-4 animate-infinite-scroll'>
+          {Array.from({ length: 10 }).map(() => (
+            <>
+              <ZapIcon className='min-w-6 min-h-6' />
+              <p className='flex-shrink-0 text-xl uppercase'>
+                Always be coding
+              </p>
+            </>
+          ))}
+        </div>
+      </div>
+
       <section>about</section>
       <section>work</section>
       <section>projects</section>
