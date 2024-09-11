@@ -1,6 +1,12 @@
 import { Hero } from '@/components/hero'
 import { ZapIcon } from '@/components/ui/zap-icon'
-import { TECH_STACK } from './tech-stack'
+import { TECH_STACK } from './tech-icons'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from './ui/tooltip'
 
 export const Home = () => {
   const exp = false
@@ -22,11 +28,20 @@ export const Home = () => {
       </div>
 
       <section>
-        <div className='flex flex-row flex-wrap items-center justify-center gap-2 mt-4'>
+        <div className='flex flex-row flex-wrap items-center justify-center gap-2 mt-16'>
           {TECH_STACK.map((tech) => (
-            <a href={tech.url} target='_blank' rel='noreferrer noopener'>
-              <tech.icon ogColor={exp} className='w-40 h-40' />
-            </a>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a href={tech.url} target='_blank' rel='noreferrer noopener'>
+                    <tech.icon ogColor={exp} className='w-40 h-40' />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{tech.name}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           ))}
         </div>
       </section>
