@@ -50,7 +50,7 @@ export const SupabaseIcon = ({
       transform='translate(-27.722 -60.338)'
     ></path>
     <path
-      className={ogColor ? 'fill-[hsl(153,60%,53%)]' : 'fill-accent'}
+      className={ogColor ? 'fill-[hsl(153,60%,53%)]' : 'fill-primary'}
       d='M53.484 2.128c3.267-4.117 9.905-1.862 9.977 3.396l.508 76.907H12.902c-9.365 0-14.587-10.817-8.764-18.149z'
     ></path>
   </svg>

@@ -28,7 +28,12 @@ export const ProjectCard = ({
         isReversed ? 'md:flex-row-reverse' : 'md:flex-row'
       )}
     >
-      <div className={'min-h-0 flex-1 shrink-0 bg-primary'}>
+      <div
+        className={cn(
+          'min-h-0 flex-1 shrink-0',
+          isReversed ? 'bg-primary' : 'bg-accent'
+        )}
+      >
         <img
           className='w-auto h-full mx-auto bg-no-repeat bg-contain'
           src={image}
@@ -37,18 +42,22 @@ export const ProjectCard = ({
       </div>
 
       <div className='flex items-center flex-1 min-h-0 shrink-0'>
-        <div className='mx-16 space-y-8 sm:space-y-4 lg:space-y-8'>
+        <div className='mx-16 space-y-8 sm:space-y-4 md:space-y-8'>
           <p className='text-2xl font-semibold'>{title}</p>
-          <p className='hidden sm:inline-flex text-muted-foreground'>
+
+          <p className='hidden text-lg font-light sm:inline-flex lg:inline-flex md:hidden'>
             {description}
           </p>
-          <div className='inline-flex flex-wrap items-center text-sm'>
+
+          <div className='inline-flex flex-wrap items-center'>
             {stack.map((item, index) => {
               const lastIndex = stack.length - 1
 
               return (
                 <>
-                  <p className='mr-2 text-muted-foreground'>{item}</p>
+                  <p className='mr-2 text-sm font-light text-muted-foreground'>
+                    {item}
+                  </p>
                   {index < lastIndex && (
                     <span
                       className={cn(
@@ -63,7 +72,12 @@ export const ProjectCard = ({
           </div>
           <div>
             <a href={url}>
-              <Button>View Project</Button>
+              <Button
+                className='font-medium uppercase border-2 border-foreground'
+                variant={'outline'}
+              >
+                View Project
+              </Button>
             </a>
           </div>
         </div>
