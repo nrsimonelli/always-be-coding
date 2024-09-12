@@ -8,7 +8,6 @@ import { Button } from './ui/button'
 export const Home = () => {
   return (
     <main className='relative transition-all duration-1000 overflow-x-clip overflow-y-clip'>
-      <div className='absolute inset-y-0 inset-x-1/2 md:inset-x-0 -translate-y-1/2 -translate-x-1/2 md:translate-x-[35%] md:translate-y-[-20%] w-[200%] md:w-screen h-[200vw] md:h-[100vw] rounded-[50%] -z-10 bg-[hsl(221,100%,88%)]'></div>
       <Hero />
       <div className='w-full h-20 bg-foreground text-background'>
         <div className='flex flex-row items-center h-full space-x-4 animate-infinite-scroll'>
@@ -36,10 +35,10 @@ export const Home = () => {
                 >
                   {/* Let's Connect! */}
                 </p>
-                <p className='mix-blend-normal after:content-["Want_to_learn_more_about_my_work_experience_and_love_for_coding?"] after:text-background after:mix-blend-difference'>
+                <p className='font-light mix-blend-normal after:content-["Want_to_learn_more_about_my_work_experience_and_love_for_coding?"] after:text-background after:mix-blend-difference'>
                   {/* Want to learn more about my work experience and love for coding? */}
                 </p>
-                <p className='mix-blend-difference after:content-["Fill_out_the_contact_form_below!"] after:text-background after:mix-blend-difference'>
+                <p className='font-light mix-blend-difference after:content-["Fill_out_the_contact_form_below!"] after:text-background after:mix-blend-difference'>
                   {/* Fill out the contact form below! */}
                 </p>
               </div>
