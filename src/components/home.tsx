@@ -7,7 +7,8 @@ import { Button } from './ui/button'
 
 export const Home = () => {
   return (
-    <main className='transition-all duration-1000 overflow-x-clip'>
+    <main className='relative transition-all duration-1000 overflow-x-clip overflow-y-clip'>
+      <div className='absolute inset-y-0 inset-x-1/2 md:inset-x-0 -translate-y-1/2 -translate-x-1/2 md:translate-x-[35%] md:translate-y-[-20%] w-[200%] md:w-screen h-[200vw] md:h-[100vw] rounded-[50%] -z-10 bg-[hsl(221,100%,88%)]'></div>
       <Hero />
       <div className='w-full h-20 bg-foreground text-background'>
         <div className='flex flex-row items-center h-full space-x-4 animate-infinite-scroll'>
@@ -24,22 +25,36 @@ export const Home = () => {
 
       <TechStack />
       <LiveProjects />
-      <section>contact</section>
+
       <section className='py-16'>
         <div className='container flex flex-row mx-auto'>
-          <div className='flex flex-col items-start justify-center flex-1 px-4 space-y-2'>
-            <p className='text-6xl font-semibold'>Let's Connect!</p>
-            <p>
-              Want to learn more about my work experience and love for coding?
-            </p>
-            <p>Fill out the contact form below!</p>
-            <Button>Contact</Button>
+          <div className='flex flex-col items-end justify-center flex-1'>
+            <div className='max-w-[540px] space-y-8'>
+              <div className='space-y-4'>
+                <p
+                  className={`lg:text-5xl text-3xl font-bold text-foreground after:content-["Let's_Connect!"] after:text-background after:mix-blend-difference`}
+                >
+                  {/* Let's Connect! */}
+                </p>
+                <p className='mix-blend-normal after:content-["Want_to_learn_more_about_my_work_experience_and_love_for_coding?"] after:text-background after:mix-blend-difference'>
+                  {/* Want to learn more about my work experience and love for coding? */}
+                </p>
+                <p className='mix-blend-difference after:content-["Fill_out_the_contact_form_below!"] after:text-background after:mix-blend-difference'>
+                  {/* Fill out the contact form below! */}
+                </p>
+              </div>
+              <Button className='uppercase' variant={'secondary'}>
+                Contact
+              </Button>
+            </div>
           </div>
-          <div className='flex-1'>
+
+          <div className='flex justify-center flex-1'>
             <img src='src/assets/site/footer.png' className='w-auto h-full' />
           </div>
         </div>
       </section>
+      <div className='absolute bottom-0 left-1/2 translate-y-[60%] -translate-x-1/2 w-[200%] md:w-[200vw] h-[200vw] md:h-[100vw] rounded-[50%] -z-10 bg-foreground'></div>
     </main>
   )
 }
