@@ -69,27 +69,3 @@ export const PROJECTS = [
     stack: ['Superhero API', 'Radix', 'Stitches'],
   },
 ]
-
-export const EXPERIENCE = [
-  {
-    company: 'Calabrio',
-    jobTitle: 'Senior Software Engineer, Front End',
-    description:
-      'Built, maintained, and delivered modern user interfaces for a world class work force optimization suite.',
-    image: '/src/assets/calabrio.jpg',
-  },
-  {
-    company: 'Thingbits',
-    jobTitle: 'Software Engineer, Full Stack',
-    description:
-      'Integrated technical solutions for the application of hardware and software in the IoT space.',
-    image: '/src/assets/thingbits.png',
-  },
-  {
-    company: 'Lost Yeti Design Co.',
-    jobTitle: 'Co-Founder, Tech Lead',
-    description:
-      'Providing elegant web design and technical solutions for individual clients and small business.',
-    image: '/src/assets/lost-yeti.png',
-  },
-]

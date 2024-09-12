@@ -6,6 +6,7 @@ import { TechStack } from './tech-stack'
 import { Button } from './ui/button'
 import { cn } from '@/lib/utils'
 import { AboutMe } from './about-me'
+import { WorkExperience } from './work-experience'
 
 const TempThemeViewer = () => {
   const tokenKeys = [
@@ -18,7 +19,7 @@ const TempThemeViewer = () => {
   ]
 
   return (
-    <div className='flex flex-row flex-wrap gap-4 p-8'>
+    <div className='flex flex-row flex-wrap justify-center gap-4 p-8'>
       <div
         className={`bg-foreground h-16 min-w-min px-4 rounded-lg flex items-center shadow`}
       >
@@ -50,7 +51,7 @@ export const Home = () => {
   const temp = true
 
   return (
-    <main className='relative transition-all duration-1000 overflow-x-clip overflow-y-clip'>
+    <main className='relative overflow-x-clip overflow-y-clip'>
       <Hero />
       <div className='w-full h-20 bg-foreground text-background'>
         <div className='flex flex-row items-center h-full space-x-4 animate-infinite-scroll'>
@@ -66,9 +67,11 @@ export const Home = () => {
       </div>
 
       <AboutMe />
-
       <TechStack />
+
       {temp && <TempThemeViewer />}
+
+      <WorkExperience />
       <LiveProjects />
 
       <section className='py-16'>

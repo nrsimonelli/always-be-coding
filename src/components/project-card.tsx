@@ -71,7 +71,9 @@ export const ProjectCard = ({
             })}
           </div>
           <div>
-            <a href={url}>
+            {/* open link in new tab */}
+
+            <a href={url} target='_blank' rel='noreferrer noopener'>
               <Button
                 className='font-medium uppercase border-2 border-foreground'
                 variant={'outline'}
