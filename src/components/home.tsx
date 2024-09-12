@@ -1,5 +1,5 @@
 import { Hero } from '@/components/hero'
-import { ZapIcon } from '@/components/ui/zap-icon'
+import { ZapIcon } from '@/components/icons/about/zap-icon'
 
 import { LiveProjects } from './live-projects'
 import { TechStack } from './tech-stack'

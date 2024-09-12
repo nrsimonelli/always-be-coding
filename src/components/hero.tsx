@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { ZapIcon } from '@/components/ui/zap-icon'
+import { ZapIcon } from '@/components/icons/about/zap-icon'
 
 export const Hero = () => {
   return (

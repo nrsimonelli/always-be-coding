@@ -4,7 +4,7 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from '@/components/ui/tooltip'
-import { TECH_STACK } from './tech-icons'
+import { TECH_STACK } from './icons/tech'
 
 export const TechStack = () => {
   const exp = false
