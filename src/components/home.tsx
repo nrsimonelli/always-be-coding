@@ -4,8 +4,51 @@ import { ZapIcon } from '@/components/ui/zap-icon'
 import { LiveProjects } from './live-projects'
 import { TechStack } from './tech-stack'
 import { Button } from './ui/button'
+import { cn } from '@/lib/utils'
+import { AboutMe } from './about-me'
+
+const TempThemeViewer = () => {
+  const tokenKeys = [
+    'accent',
+    'secondary',
+    'primary',
+    'destructive',
+    'popover',
+    'card',
+  ]
+
+  return (
+    <div className='flex flex-row flex-wrap gap-4 p-8'>
+      <div
+        className={`bg-foreground h-16 min-w-min px-4 rounded-lg flex items-center shadow`}
+      >
+        <p className={cn('capitalize', `text-background`)}>foreground</p>
+      </div>
+      <div
+        className={`bg-background h-16 min-w-min px-4 rounded-lg flex items-center shadow`}
+      >
+        <p className={cn('capitalize', `text-foreground`)}>background</p>
+      </div>
+      <div
+        className={`bg-muted h-16 min-w-min px-4 rounded-lg flex items-center shadow`}
+      >
+        <p className={cn('capitalize', `text-muted-foreground`)}>muted</p>
+      </div>
+      {tokenKeys.map((key) => (
+        <div
+          key={key}
+          className={`bg-${key} h-16 min-w-min px-4 rounded-lg flex items-center shadow`}
+        >
+          <p className={cn('capitalize', `text-${key}-foreground`)}>{key}</p>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export const Home = () => {
+  const temp = true
+
   return (
     <main className='relative transition-all duration-1000 overflow-x-clip overflow-y-clip'>
       <Hero />
@@ -22,7 +65,10 @@ export const Home = () => {
         </div>
       </div>
 
+      <AboutMe />
+
       <TechStack />
+      {temp && <TempThemeViewer />}
       <LiveProjects />
 
       <section className='py-16'>
