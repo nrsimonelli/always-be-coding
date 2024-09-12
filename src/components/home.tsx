@@ -1,16 +1,11 @@
 import { Hero } from '@/components/hero'
 import { ZapIcon } from '@/components/ui/zap-icon'
-import { TECH_STACK } from './tech-icons'
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from './ui/tooltip'
+
+import { LiveProjects } from './live-projects'
+import { TechStack } from './tech-stack'
+import { Button } from './ui/button'
 
 export const Home = () => {
-  const exp = false
-
   return (
     <main className='transition-all duration-1000 overflow-x-clip'>
       <Hero />
@@ -27,28 +22,24 @@ export const Home = () => {
         </div>
       </div>
 
-      <section>
-        <div className='flex flex-row flex-wrap items-center justify-center gap-2 mt-16'>
-          {TECH_STACK.map((tech) => (
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a href={tech.url} target='_blank' rel='noreferrer noopener'>
-                    <tech.icon ogColor={exp} className='w-40 h-40' />
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{tech.name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          ))}
+      <TechStack />
+      <LiveProjects />
+      <section>contact</section>
+      <section className='py-16'>
+        <div className='container flex flex-row mx-auto'>
+          <div className='flex flex-col items-start justify-center flex-1 px-4 space-y-2'>
+            <p className='text-6xl font-semibold'>Let's Connect!</p>
+            <p>
+              Want to learn more about my work experience and love for coding?
+            </p>
+            <p>Fill out the contact form below!</p>
+            <Button>Contact</Button>
+          </div>
+          <div className='flex-1'>
+            <img src='src/assets/site/footer.png' className='w-auto h-full' />
+          </div>
         </div>
       </section>
-      <section>work</section>
-      <section>projects</section>
-      <section>contact</section>
-      <section>footer</section>
     </main>
   )
 }
