@@ -7,11 +7,11 @@ export const Hero = () => {
       <div className='absolute inset-y-0 inset-x-1/2 md:inset-x-0 -translate-y-1/2 -translate-x-1/2 md:translate-x-[35%] md:translate-y-[-20%] w-[200%] md:w-screen h-[200vw] md:h-[100vw] rounded-[50%] -z-10 bg-[hsl(221,100%,88%)]'></div>
 
       <nav className='inline-flex items-center justify-between w-full px-4 py-4 border-2 border-foreground'>
-        <ZapIcon className='fill-accent' />
+        <ZapIcon className='fill-primary' />
         <p className='text-lg uppercase'>Simonelli UI</p>
         <a className='invisible md:visible' href='#contact'>
           <Button
-            variant={'secondary'}
+            variant={'accent'}
             className='text-lg uppercase border-2 border-foreground'
           >
             Contact
