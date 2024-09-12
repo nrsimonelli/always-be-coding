@@ -30,18 +30,19 @@ const AboutMeCard = ({ title, description, icon: Icon }: AboutMeCardProps) => {
 
 export const AboutMe = () => {
   return (
-    <section
-      className='container px-4 py-16 mx-auto space-y-16 sm:px-0'
-      id='about'
-    >
-      <div className='mx-auto md:max-w-screen-md lg:max-w-screen-lg'>
-        <p className='text-3xl font-bold text-center lg:text-5xl'>Who am I?</p>
-      </div>
+    <section className='bg-background' id='about'>
+      <div className='container px-4 py-16 mx-auto space-y-16 text-center sm:px-0'>
+        <div className='mx-auto md:max-w-screen-md lg:max-w-screen-lg'>
+          <p className='text-3xl font-bold text-center lg:text-5xl'>
+            Who am I?
+          </p>
+        </div>
 
-      <div className='flex flex-row flex-wrap items-center justify-center max-w-screen-lg gap-8 mx-auto'>
-        {PERSONAL_TRAITS.map((item) => (
-          <AboutMeCard {...item} />
-        ))}
+        <div className='flex flex-row flex-wrap items-center justify-center max-w-screen-lg gap-8 mx-auto'>
+          {PERSONAL_TRAITS.map((item) => (
+            <AboutMeCard {...item} />
+          ))}
+        </div>
       </div>
     </section>
   )

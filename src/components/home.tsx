@@ -48,7 +48,7 @@ const TempThemeViewer = () => {
 }
 
 export const Home = () => {
-  const temp = true
+  const temp = false
 
   return (
     <main className='relative overflow-x-clip overflow-y-clip'>
