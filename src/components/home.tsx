@@ -7,6 +7,7 @@ import { Button } from './ui/button'
 import { cn } from '@/lib/utils'
 import { AboutMe } from './about-me'
 import { WorkExperience } from './work-experience'
+import { ConnectDialog } from './connect-dialog'
 
 const TempThemeViewer = () => {
   const tokenKeys = [
@@ -74,7 +75,7 @@ export const Home = () => {
       <WorkExperience />
       <LiveProjects />
 
-      <section className='py-16'>
+      <section id='connect' className='py-16'>
         <div className='container flex flex-row mx-auto'>
           <div className='flex flex-col items-end justify-center flex-1'>
             <div className='max-w-[540px] space-y-8'>
@@ -91,9 +92,11 @@ export const Home = () => {
                   {/* Fill out the contact form below! */}
                 </p>
               </div>
-              <Button className='uppercase' variant={'secondary'}>
-                Contact
-              </Button>
+              <ConnectDialog>
+                <Button className='uppercase' variant={'secondary'}>
+                  Contact
+                </Button>
+              </ConnectDialog>
             </div>
           </div>
 

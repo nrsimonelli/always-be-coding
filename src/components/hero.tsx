@@ -9,7 +9,7 @@ export const Hero = () => {
       <nav className='inline-flex items-center justify-between w-full px-4 py-4 border-2 border-foreground'>
         <ZapIcon className='fill-primary' />
         <p className='text-lg uppercase'>Simonelli UI</p>
-        <a className='hidden md:block' href='#contact'>
+        <a className='hidden md:block' href='#connect'>
           <Button
             variant={'accent'}
             className='text-lg uppercase border-2 border-foreground'
