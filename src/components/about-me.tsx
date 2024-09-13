@@ -18,7 +18,7 @@ const AboutMeCard = ({ title, description, icon: Icon }: AboutMeCardProps) => {
         <Icon className='fill-foreground' />
         {/* Icon */}
       </div>
-      <div className='text-2xl font-semibold'>
+      <div className='text-xl font-semibold md:text-2xl'>
         <div>{title}</div>
       </div>
       <div className='text-sm font-light text-center text-muted-foreground'>
@@ -31,7 +31,7 @@ const AboutMeCard = ({ title, description, icon: Icon }: AboutMeCardProps) => {
 export const AboutMe = () => {
   return (
     <section className='bg-background' id='about'>
-      <div className='container px-4 py-16 mx-auto space-y-16 text-center sm:px-0'>
+      <div className='container px-4 pt-16 pb-16 mx-auto space-y-8 text-center md:pt-32 sm:px-0'>
         <div className='mx-auto md:max-w-screen-md lg:max-w-screen-lg'>
           <p className='text-3xl font-bold text-center lg:text-5xl'>
             Who am I?

@@ -10,7 +10,7 @@ export const TechStack = () => {
   const exp = false
   return (
     <section
-      className='container px-4 py-16 mx-auto space-y-16 text-center sm:px-0'
+      className='container px-4 py-16 mx-auto space-y-8 text-center sm:px-0'
       id='technologies'
     >
       <div className='mx-auto md:max-w-screen-md lg:max-w-screen-lg'>
