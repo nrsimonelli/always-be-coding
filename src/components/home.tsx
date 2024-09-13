@@ -3,11 +3,10 @@ import { ZapIcon } from '@/components/icons/about/zap-icon'
 
 import { LiveProjects } from './live-projects'
 import { TechStack } from './tech-stack'
-import { Button } from './ui/button'
 import { cn } from '@/lib/utils'
 import { AboutMe } from './about-me'
 import { WorkExperience } from './work-experience'
-import { ConnectDialog } from './connect-dialog'
+import { Footer } from './footer'
 
 const TempThemeViewer = () => {
   const tokenKeys = [
@@ -75,37 +74,9 @@ export const Home = () => {
       <WorkExperience />
       <LiveProjects />
 
-      <section id='connect' className='py-16'>
-        <div className='container flex flex-row mx-auto'>
-          <div className='flex flex-col items-end justify-center flex-1'>
-            <div className='max-w-[540px] space-y-8'>
-              <div className='space-y-4'>
-                <p
-                  className={`lg:text-5xl text-3xl font-bold text-foreground after:content-["Let's_Connect!"] after:text-background after:mix-blend-difference`}
-                >
-                  {/* Let's Connect! */}
-                </p>
-                <p className='font-light mix-blend-normal after:content-["Want_to_learn_more_about_my_work_experience_and_love_for_coding?"] after:text-background after:mix-blend-difference'>
-                  {/* Want to learn more about my work experience and love for coding? */}
-                </p>
-                <p className='font-light mix-blend-difference after:content-["Fill_out_the_contact_form_below!"] after:text-background after:mix-blend-difference'>
-                  {/* Fill out the contact form below! */}
-                </p>
-              </div>
-              <ConnectDialog>
-                <Button className='uppercase' variant={'secondary'}>
-                  Contact
-                </Button>
-              </ConnectDialog>
-            </div>
-          </div>
-
-          <div className='flex justify-center flex-1'>
-            <img src='src/assets/site/footer.png' className='w-auto h-full' />
-          </div>
-        </div>
-      </section>
-      <div className='absolute bottom-0 left-1/2 translate-y-[60%] -translate-x-1/2 w-[200%] md:w-[200vw] h-[200vw] md:h-[100vw] rounded-[50%] -z-10 bg-foreground'></div>
+      <Footer />
+      {/* circle graphic */}
+      {/* <div className='absolute bottom-0 left-1/2 translate-y-[60%] -translate-x-1/2 w-[200%] md:w-[200vw] h-[200vw] md:h-[100vw] rounded-[50%] -z-10 bg-foreground'></div> */}
     </main>
   )
 }
