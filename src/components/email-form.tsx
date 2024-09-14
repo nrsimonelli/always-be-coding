@@ -13,6 +13,7 @@ import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 import { toast } from '@/hooks/use-toast'
+import emailjs from '@emailjs/browser'
 
 const formSchema = z.object({
   name: z
@@ -39,15 +40,25 @@ export const EmailForm = () => {
   })
 
   function onSubmit(values: FormValues) {
-    console.log(values)
-    toast({
-      title: 'You submitted the following values:',
-      description: (
-        <pre className='mt-2 w-[340px] rounded-md bg-slate-950 p-4'>
-          <code className='text-white'>{JSON.stringify(values, null, 2)}</code>
-        </pre>
-      ),
-    })
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        values,
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+      )
+      .then(() => {
+        toast({
+          title: 'Thanks for the message',
+          description: 'I will get back to you shortly',
+        })
+      })
+      .catch(() => {
+        toast({
+          title: 'Unable to send email',
+          description: 'Please try again later',
+        })
+      })
   }
 
   return (
