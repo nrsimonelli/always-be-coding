@@ -18,11 +18,11 @@ export const SupabaseIcon = ({
       >
         <stop
           offset='0'
-          stop-color={ogColor ? 'hsl(153,61%,36%)' : 'hsl(246,100%,45%)'}
+          stopColor={ogColor ? 'hsl(153,61%,36%)' : 'hsl(246,100%,45%)'}
         ></stop>
         <stop
           offset='1'
-          stop-color={ogColor ? 'hsl(153,60%,53%)' : 'hsl(246,100%,62%)'}
+          stopColor={ogColor ? 'hsl(153,60%,53%)' : 'hsl(246,100%,62%)'}
         ></stop>
       </linearGradient>
       <linearGradient
@@ -35,7 +35,7 @@ export const SupabaseIcon = ({
         gradientUnits='userSpaceOnUse'
       >
         <stop offset='0'></stop>
-        <stop offset='1' stop-opacity='0'></stop>
+        <stop offset='1' stopOpacity='0'></stop>
       </linearGradient>
     </defs>
     <path
@@ -45,7 +45,7 @@ export const SupabaseIcon = ({
     ></path>
     <path
       fill='url(#b)'
-      fill-opacity='.2'
+      fillOpacity='.2'
       d='M102.24 186.21c-3.267 4.117-9.904 1.862-9.977-3.397l-1.156-76.906h51.715c9.365 0 14.587 10.817 8.763 18.149z'
       transform='translate(-27.722 -60.338)'
     ></path>
