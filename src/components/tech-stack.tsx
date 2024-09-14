@@ -18,7 +18,7 @@ export const TechStack = () => {
       </div>
       <div className='flex flex-row flex-wrap items-center justify-center space-x-4 space-y-4 max-w-[540px] mx-auto'>
         {TECH_STACK.map(({ url, name, icon: Icon }) => (
-          <TooltipProvider>
+          <TooltipProvider key={`${name}-tooltip`}>
             <Tooltip>
               <TooltipTrigger asChild>
                 <a href={url} target='_blank' rel='noreferrer noopener'>

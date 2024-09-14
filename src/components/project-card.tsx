@@ -55,7 +55,10 @@ export const ProjectCard = ({
 
               return (
                 <>
-                  <p className='mr-2 text-sm font-light text-muted-foreground'>
+                  <p
+                    key={`tag-${index}`}
+                    className='mr-2 text-sm font-light text-muted-foreground'
+                  >
                     {item}
                   </p>
                   {index < lastIndex && (

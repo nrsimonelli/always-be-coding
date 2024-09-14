@@ -13,7 +13,11 @@ export const LiveProjects = () => {
         </p>
       </div>
       {PROJECTS.map((project, index) => (
-        <ProjectCard isReversed={index % 2 === 0} {...project} />
+        <ProjectCard
+          key={`live-project-card-${index}`}
+          isReversed={index % 2 === 0}
+          {...project}
+        />
       ))}
     </section>
   )

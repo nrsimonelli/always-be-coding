@@ -13,8 +13,8 @@ export const WorkExperience = () => {
         </p>
       </div>
       <div className='flex flex-col flex-wrap items-center gap-8 mx-auto transition-all duration-500 md:justify-center md:flex-row'>
-        {EXPERIENCE.map((project) => (
-          <ExperienceCard {...project} />
+        {EXPERIENCE.map((project, index) => (
+          <ExperienceCard key={`experience-card-${index}`} {...project} />
         ))}
       </div>
     </section>

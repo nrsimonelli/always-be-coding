@@ -35,9 +35,9 @@ const TempThemeViewer = () => {
       >
         <p className={cn('capitalize', `text-muted-foreground`)}>muted</p>
       </div>
-      {tokenKeys.map((key) => (
+      {tokenKeys.map((key, index) => (
         <div
-          key={key}
+          key={`theme-token-${index}`}
           className={`bg-${key} h-16 min-w-min px-4 rounded-lg flex items-center shadow`}
         >
           <p className={cn('capitalize', `text-${key}-foreground`)}>{key}</p>
@@ -55,9 +55,9 @@ export const Home = () => {
       <Hero />
       <div className='w-full h-20 bg-foreground text-background'>
         <div className='flex flex-row items-center h-full space-x-4 animate-infinite-scroll'>
-          {Array.from({ length: 10 }).map(() => (
+          {Array.from({ length: 10 }).map((_, index) => (
             <>
-              <ZapIcon className='min-w-6 min-h-6' />
+              <ZapIcon key={`abc-${index}`} className='min-w-6 min-h-6' />
               <p className='flex-shrink-0 text-xl uppercase'>
                 Always be coding
               </p>

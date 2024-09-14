@@ -39,8 +39,8 @@ export const AboutMe = () => {
         </div>
 
         <div className='flex flex-row flex-wrap items-center justify-center max-w-screen-lg gap-8 mx-auto'>
-          {PERSONAL_TRAITS.map((item) => (
-            <AboutMeCard {...item} />
+          {PERSONAL_TRAITS.map((item, index) => (
+            <AboutMeCard key={`about-me-card-${index}`} {...item} />
           ))}
         </div>
       </div>
