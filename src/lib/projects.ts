@@ -17,14 +17,14 @@ export const PROJECTS = [
     stack: ['Resend', 'Supabase', 'React hook form'],
   },
   {
-    title: 'Minnesota Winter League',
+    title: 'Minneapolis Winter League',
     url: 'https://www.mplswinterleague.com/',
     background: 'bg-blue-400',
     image: winterLeagueImage,
     alt: 'Cloudy white sphere resembling a snowball.',
     description:
       'Feature rich webapp for a local ultimate frisbee community league. Signup, register, or create a team with friends!',
-    stack: ['Firebase', 'TypeScript', 'Stripe'],
+    stack: ['Firebase', 'Dropbox Sign', 'Stripe'],
   },
   {
     title: 'Tournament Rating System',
@@ -54,7 +54,7 @@ export const PROJECTS = [
     alt: 'Blue diamond',
     description:
       'A public voting experiment to determine the balance of various match-ups in the board game "Scythe".',
-    stack: ['React', 'Supabase', 'Edge functions'],
+    stack: ['Animation', 'Supabase', 'Edge functions'],
   },
   {
     title: 'Rival Dex',
