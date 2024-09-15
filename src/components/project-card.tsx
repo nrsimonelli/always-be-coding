@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils'
 import { Button } from './ui/button'
+import { Fragment } from 'react/jsx-runtime'
 
 interface ProjectCardProps {
   isReversed: boolean
@@ -54,11 +55,8 @@ export const ProjectCard = ({
               const lastIndex = stack.length - 1
 
               return (
-                <>
-                  <p
-                    key={`tag-${index}`}
-                    className='mr-2 text-sm font-light text-muted-foreground'
-                  >
+                <Fragment key={`tag-${index}`}>
+                  <p className='mr-2 text-sm font-light text-muted-foreground'>
                     {item}
                   </p>
                   {index < lastIndex && (
@@ -69,7 +67,7 @@ export const ProjectCard = ({
                       )}
                     />
                   )}
-                </>
+                </Fragment>
               )
             })}
           </div>

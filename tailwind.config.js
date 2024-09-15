@@ -56,9 +56,15 @@ export default {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
         },
+        scanline: {
+          '0%': { bottom: '100%' },
+          '80%': { bottom: '100%' },
+          '100%': { bottom: '0%' },
+        },
       },
       animation: {
         'infinite-scroll': 'infinite-scroll 15s linear infinite',
+        scanline: 'scanline 10s linear infinite',
       },
       fontFamily: {
         unbounded: ['Unbounded', 'sans-serif'],
