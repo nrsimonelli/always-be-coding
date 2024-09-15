@@ -9,6 +9,8 @@ import { WorkExperience } from './work-experience'
 import { Footer } from './footer'
 import { Fragment } from 'react/jsx-runtime'
 
+import { LoadingAnimation } from './loading-animation'
+
 const TempThemeViewer = () => {
   const tokenKeys = [
     'accent',
@@ -76,8 +78,7 @@ export const Home = () => {
       <LiveProjects />
 
       <Footer />
-      {/* circle graphic */}
-      {/* <div className='absolute bottom-0 left-1/2 translate-y-[60%] -translate-x-1/2 w-[200%] md:w-[200vw] h-[200vw] md:h-[100vw] rounded-[50%] -z-10 bg-foreground'></div> */}
+      <LoadingAnimation />
     </main>
   )
 }
