@@ -1,5 +1,5 @@
 import { PROJECTS } from '@/lib/projects'
-import { ProjectCard } from './project-card'
+import { ProjectCard } from '@/components/project-card'
 
 export const LiveProjects = () => {
   return (

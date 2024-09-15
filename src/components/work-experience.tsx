@@ -1,5 +1,5 @@
 import { EXPERIENCE } from '@/lib/experience'
-import { ExperienceCard } from './experience-card'
+import { ExperienceCard } from '@/components/experience-card'
 
 export const WorkExperience = () => {
   return (

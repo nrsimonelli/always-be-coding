@@ -1,14 +1,14 @@
 import { Hero } from '@/components/hero'
 import { ZapIcon } from '@/components/icons/about/zap-icon'
 
-import { LiveProjects } from './live-projects'
-import { TechStack } from './tech-stack'
-import { AboutMe } from './about-me'
-import { WorkExperience } from './work-experience'
-import { Footer } from './footer'
-import { Fragment } from 'react/jsx-runtime'
+import { LiveProjects } from '@/components/live-projects'
+import { TechStack } from '@/components/tech-stack'
+import { AboutMe } from '@/components/about-me'
+import { WorkExperience } from '@/components/work-experience'
+import { Footer } from '@/components/footer'
+import { LoadingAnimation } from '@/components/loading-animation'
 
-import { LoadingAnimation } from './loading-animation'
+import { Fragment } from 'react/jsx-runtime'
 
 export const Home = () => {
   return (

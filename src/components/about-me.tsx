@@ -1,4 +1,4 @@
-import { PERSONAL_TRAITS } from './icons/about'
+import { PERSONAL_TRAITS } from '@/components/icons/about'
 
 interface AboutMeCardProps {
   title: string

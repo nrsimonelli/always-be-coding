@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import emailjs from '@emailjs/browser'
+
 import {
   Form,
   FormControl,
@@ -9,11 +11,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from './ui/form'
-import { Button } from './ui/button'
-import { Input } from './ui/input'
-import { Textarea } from './ui/textarea'
-import emailjs from '@emailjs/browser'
+} from '@/components/ui/form'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
 
 const formSchema = z.object({
   name: z

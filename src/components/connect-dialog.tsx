@@ -5,8 +5,8 @@ import {
   DialogTitle,
   DialogDescription,
   DialogHeader,
-} from './ui/dialog'
-import { EmailForm } from './email-form'
+} from '@/components/ui/dialog'
+import { EmailForm } from '@/components/email-form'
 import { ReactNode, useState } from 'react'
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 import { cn } from '@/lib/utils'
