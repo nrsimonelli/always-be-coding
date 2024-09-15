@@ -1,5 +1,6 @@
 import { ConnectDialog } from '@/components/connect-dialog'
 import { Button } from '@/components/ui/button'
+import footerImage from '@/assets/site/footer.png'
 
 export const Footer = () => {
   return (
@@ -30,7 +31,7 @@ export const Footer = () => {
 
         <div className='flex self-end justify-center flex-1 order-1 md:self-auto md:order-2'>
           <img
-            src='src/assets/site/footer.png'
+            src={footerImage}
             className='max-w-[200px] md:max-w-max w-full h-auto'
           />
         </div>

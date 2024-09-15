@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { ZapIcon } from '@/components/icons/about/zap-icon'
+import heroImage from '@/assets/site/hero.png'
 
 export const Hero = () => {
   return (
@@ -37,7 +38,7 @@ export const Hero = () => {
         </div>
         <div className='flex flex-1 order-2 md:order-3'>
           <img
-            src='src/assets/site/hero.png'
+            src={heroImage}
             alt='Computer with headphones, a keyboard, and a coffee cup nearby'
           />
         </div>
