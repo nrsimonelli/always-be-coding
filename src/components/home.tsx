@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils'
 import { AboutMe } from './about-me'
 import { WorkExperience } from './work-experience'
 import { Footer } from './footer'
+import { Fragment } from 'react/jsx-runtime'
 
 const TempThemeViewer = () => {
   const tokenKeys = [
@@ -56,12 +57,12 @@ export const Home = () => {
       <div className='w-full h-20 bg-foreground text-background'>
         <div className='flex flex-row items-center h-full space-x-4 animate-infinite-scroll'>
           {Array.from({ length: 10 }).map((_, index) => (
-            <>
-              <ZapIcon key={`abc-${index}`} className='min-w-6 min-h-6' />
+            <Fragment key={`abc-${index}`}>
+              <ZapIcon className='min-w-6 min-h-6' />
               <p className='flex-shrink-0 text-xl uppercase'>
                 Always be coding
               </p>
-            </>
+            </Fragment>
           ))}
         </div>
       </div>
