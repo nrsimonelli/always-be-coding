@@ -9,7 +9,6 @@ import {
 import { EmailForm } from '@/components/email-form'
 import { ReactNode, useState } from 'react'
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
-import { cn } from '@/lib/utils'
 
 export const ConnectDialog = ({ children }: { children: ReactNode }) => {
   const [showThankYouScreen, setShowThankYouScreen] = useState(false)
@@ -25,7 +24,7 @@ export const ConnectDialog = ({ children }: { children: ReactNode }) => {
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className='bg-foreground overflow-clip border-foreground'>
+      <DialogContent className='p-8 bg-foreground overflow-clip border-foreground [&>button]:text-accent [&>button]:top-8 [&>button]:right-8'>
         <div className='content-["_"] block absolute top-[0] left-[0] bottom-[0] right-[0] bg-[linear-gradient(_to_bottom,_rgba(18,_16,_16,_0)_50%,_rgba(0,_0,_0,_0.25)_50%_)] [background-size:100%_8px] pointer-events-none -z-10'>
           <div className='w-full h-[100px] bg-[linear-gradient(_0deg,_rgba(0,_0,_0,_0)_0%,_rgba(255,_255,_255,_0.2)_10%,_rgba(0,_0,_0,_0.1)_100%_)] opacity-10 absolute bottom-full animate-[scanline_10s_linear_infinite]'></div>
           <div></div>
@@ -40,12 +39,7 @@ export const ConnectDialog = ({ children }: { children: ReactNode }) => {
             <DialogDescription>Email portfolio contact form</DialogDescription>
           </VisuallyHidden>
         </DialogHeader>
-        <div
-          className={cn(
-            'transition-all duration-500',
-            showThankYouScreen ? 'h-[140px]' : 'h-[400px]'
-          )}
-        >
+        <div className='min-h-[396px]'>
           <div className={showThankYouScreen ? 'block' : 'hidden'}>
             <p className='text-accent'>Your message was sent successfully.</p>
           </div>
