@@ -1,6 +1,6 @@
 import { PERSONAL_TRAITS } from '@/components/icons/about'
+import { useStaggeredAnimation } from '@/hooks/useStaggeredAnimation'
 import { cn } from '@/lib/utils'
-import { useEffect, useState, useRef } from 'react'
 
 interface AboutMeCardProps {
   title: string
@@ -45,45 +45,18 @@ const AboutMeCard = ({
 }
 
 export const AboutMe = () => {
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
-  const [isVisibleArray, setIsVisibleArray] = useState<boolean[]>([])
-
   const delayValueList = [
     'delay-300',
-    'delay-600',
+    'delay-500',
+    'delay-700',
     'delay-900',
-    'delay-1200',
-    'delay-1500',
-    'delay-1800',
+    'delay-1100',
+    'delay-1300',
   ]
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        setIsVisibleArray((prev) => {
-          const updatedArray = [...prev]
-          entries.forEach((entry) => {
-            const index = cardRefs.current.findIndex(
-              (ref) => ref === entry.target
-            )
-            if (entry.isIntersecting && !updatedArray[index]) {
-              updatedArray[index] = true
-            }
-          })
-          return updatedArray
-        })
-      },
-      { threshold: 0.2 }
-    )
 
-    cardRefs.current.forEach((ref) => {
-      if (ref) {
-        observer.observe(ref)
-      }
-    })
-    return () => {
-      observer.disconnect()
-    }
-  }, [])
+  const { refCallbacks, isVisibleArray } = useStaggeredAnimation(
+    PERSONAL_TRAITS.length
+  )
 
   return (
     <section className='bg-background' id='about'>
@@ -101,7 +74,7 @@ export const AboutMe = () => {
               {...item}
               isVisible={isVisibleArray[index]}
               delayValue={delayValueList[index]}
-              refCallback={(element) => (cardRefs.current[index] = element)}
+              refCallback={refCallbacks[index]}
             />
           ))}
         </div>

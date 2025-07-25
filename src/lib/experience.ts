@@ -1,8 +1,16 @@
 import calabrioImage from '@/assets/experience/calabrio.jpg'
 import thingbitsImage from '@/assets/experience/thingbits.png'
 import lostYetiImage from '@/assets/experience/lost-yeti-small.png'
+import clockworkImage from '@/assets/experience/clockwork.svg'
 
 export const EXPERIENCE = [
+  {
+    title: 'Clockwork',
+    position: 'Senior Software Engineer, Front End',
+    description:
+      'Shipped cutting edge solutions and rapidly uplifted legacy enterprise technology for an elite coding agency.',
+    image: clockworkImage,
+  },
   {
     title: 'Calabrio',
     position: 'Senior Software Engineer, Front End',
@@ -19,7 +27,7 @@ export const EXPERIENCE = [
   },
   {
     title: 'Lost Yeti Design Co.',
-    position: 'Co-Founder & Lead Developer',
+    position: 'Co-Founder & Developer',
     description:
       'Providing elegant web design and technical solutions for individual clients and small business.',
     image: lostYetiImage,
