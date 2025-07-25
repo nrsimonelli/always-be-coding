@@ -54,7 +54,8 @@ export default {
       keyframes: {
         'infinite-scroll': {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
+          // had to subtract .5rem to avoid the "jumping" effect between cycles
+          '100%': { transform: 'translateX(calc(-50% - .5rem))' },
         },
         scanline: {
           '0%': { bottom: '100%' },

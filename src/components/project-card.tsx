@@ -25,24 +25,25 @@ export const ProjectCard = ({
   return (
     <div
       className={cn(
-        'transition-all duration-500 rounded-lg overflow-clip shadow-xl h-[520px] md:flex-row flex flex-col md:max-w-screen-md mx-auto md:h-[336px] lg:h-[445px] lg:max-w-screen-lg min-w-[280px] bg-card text-card-foreground',
+        'flex flex-col mx-auto overflow-clip rounded-lg shadow-xl transition-all duration-500 h-[520px] md:flex-row md:max-w-screen-md md:h-[336px] lg:h-[445px] lg:max-w-screen-lg min-w-[280px] bg-card text-card-foreground',
         isReversed ? 'md:flex-row-reverse' : 'md:flex-row'
       )}
     >
       <div
         className={cn(
-          'min-h-0 flex-1 shrink-0',
+          'flex flex-1 justify-center items-center min-h-0 shrink-0',
           isReversed ? 'bg-primary' : 'bg-accent'
         )}
       >
         <img
-          className='w-auto h-full mx-auto bg-no-repeat bg-contain'
+          className='object-contain w-auto max-w-full h-auto max-h-full'
           src={image}
           alt={alt}
+          loading='lazy'
         />
       </div>
 
-      <div className='flex items-center flex-1 min-h-0 shrink-0'>
+      <div className='flex flex-1 items-center min-h-0 shrink-0'>
         <div className='mx-16 space-y-8 sm:space-y-4 md:space-y-8'>
           <p className='text-2xl font-semibold'>{title}</p>
 

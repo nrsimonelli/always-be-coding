@@ -1,6 +1,6 @@
 import gppImage from '@/assets/projects/gpp.png'
 import winterLeagueImage from '@/assets/projects/winter-league.png'
-import tournamentRatingImage from '@/assets/projects/tournament-rating.png'
+import tournamentRatingImage from '@/assets/projects/spheres.png'
 import engagePlusImage from '@/assets/projects/engage.png'
 import matchupImage from '@/assets/projects/matchup.png'
 import rivaldexImage from '@/assets/projects/rival-dex.png'
@@ -31,7 +31,7 @@ export const PROJECTS = [
     url: 'https://tundra-santa.vercel.app/',
     background: 'bg-emerald-400',
     image: tournamentRatingImage,
-    alt: 'Three filled circles in increasing size.',
+    alt: 'Floating spheres grouped into the shape of a cube.',
     description:
       'Applied statistical analysis to large multiplayer data set for online board game tournaments.',
     stack: ['Next.js', 'Python', 'Supabase'],
@@ -53,7 +53,7 @@ export const PROJECTS = [
     image: matchupImage,
     alt: 'Blue diamond',
     description:
-      'A public voting experiment to determine the balance of various match-ups in the board game "Scythe".',
+      'A public voting experiment to determine the balance of various match-ups in the board game Scythe.',
     stack: ['Animation', 'Supabase', 'Edge functions'],
   },
   {
