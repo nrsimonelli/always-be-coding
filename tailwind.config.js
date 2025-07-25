@@ -64,12 +64,20 @@ export default {
         },
       },
       animation: {
-        'infinite-scroll': 'infinite-scroll 15s linear infinite',
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
         scanline: 'scanline 10s linear infinite',
       },
       fontFamily: {
         unbounded: ['Unbounded', 'sans-serif'],
         gasoek: ['Gasoek', 'sans-serif'],
+      },
+      transitionDelay: {
+        300: '300ms',
+        600: '600ms',
+        900: '900ms',
+        1200: '1200ms',
+        1500: '1500ms',
+        1800: '1800ms',
       },
     },
   },
