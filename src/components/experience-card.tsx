@@ -12,11 +12,11 @@ export const ExperienceCard = ({
   image,
 }: ExperienceCardProps) => {
   return (
-    <div className='shadow-xl bg-card text-card-foreground p-8 rounded-lg space-y-4 flex flex-col flex-1 basis-80 md:h-[320px] justify-center md:justify-start'>
+    <div className='shadow-xl bg-card text-card-foreground p-8 rounded-lg space-y-4 flex flex-col flex-1 basis-80 md:h-[320px] justify-center md:justify-start lg:min-w-[33%] lg:max-w-[496px]'>
       <div className='inline-flex items-center space-x-2'>
-        <div className='flex justify-center w-16 h-16 rounded-full shadow overflow-clip shrink-0'>
+        <div className='flex justify-center w-16 h-16 overflow-clip rounded-full shadow shrink-0'>
           <img
-            className={'h-full w-auto'}
+            className={'w-auto h-full'}
             src={image}
             alt='work experience avatar logo'
           />

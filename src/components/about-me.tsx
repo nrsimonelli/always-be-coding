@@ -1,5 +1,5 @@
 import { PERSONAL_TRAITS } from '@/components/icons/about'
-import { useStaggeredAnimation } from '@/hooks/useStaggeredAnimation'
+import { useStaggeredAnimation } from '@/hooks/use-staggered-animation'
 import { cn } from '@/lib/utils'
 
 interface AboutMeCardProps {
