@@ -1,5 +1,5 @@
 import { TECH_STACK } from '@/components/icons/tech'
-import { FloatingLogos } from './floating-logos'
+import { FloatingLogos } from '@/components/floating-logos'
 
 export const TechStack = () => {
   return (

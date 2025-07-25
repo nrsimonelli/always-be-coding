@@ -19,7 +19,6 @@ const AboutMeCard = ({
   refCallback,
   isVisible = false,
 }: AboutMeCardProps) => {
-  console.log(title, delayValue)
   return (
     <div
       ref={refCallback}

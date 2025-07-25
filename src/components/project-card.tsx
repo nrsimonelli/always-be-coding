@@ -1,6 +1,7 @@
+import { Fragment } from 'react/jsx-runtime'
+
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
-import { Fragment } from 'react/jsx-runtime'
 
 interface ProjectCardProps {
   isReversed: boolean

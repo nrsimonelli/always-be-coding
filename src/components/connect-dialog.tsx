@@ -1,3 +1,6 @@
+import { ReactNode, useState } from 'react'
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
+
 import {
   Dialog,
   DialogTrigger,
@@ -7,8 +10,6 @@ import {
   DialogHeader,
 } from '@/components/ui/dialog'
 import { EmailForm } from '@/components/email-form'
-import { ReactNode, useState } from 'react'
-import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 
 export const ConnectDialog = ({ children }: { children: ReactNode }) => {
   const [showThankYouScreen, setShowThankYouScreen] = useState(false)

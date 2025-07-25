@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+
 import { useItemsPerRow } from '@/hooks/use-items-per-row'
 
 type TechStackItem = {
