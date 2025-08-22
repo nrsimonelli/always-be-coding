@@ -1,15 +1,15 @@
 import calabrioImage from '@/assets/experience/calabrio.jpg'
 import thingbitsImage from '@/assets/experience/thingbits.png'
 import lostYetiImage from '@/assets/experience/lost-yeti-small.png'
-import clockworkImage from '@/assets/experience/clockwork.svg'
+import rhImage from '@/assets/experience/rh.png'
 
 export const EXPERIENCE = [
   {
-    title: 'Clockwork',
+    title: 'Robert Half',
     position: 'Senior Software Engineer, Front End',
     description:
-      'Shipped cutting edge solutions and rapidly uplifted legacy enterprise technology for an elite coding agency.',
-    image: clockworkImage,
+      'Developed cutting edge UI and led development efforts on multiple high scale projects with a renowned talent agency.',
+    image: rhImage,
   },
   {
     title: 'Calabrio',

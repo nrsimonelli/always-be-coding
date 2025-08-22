@@ -46,11 +46,11 @@ const AboutMeCard = ({
 export const AboutMe = () => {
   const delayValueList = [
     'delay-300',
-    'delay-500',
-    'delay-700',
+    'delay-450',
+    'delay-600',
+    'delay-750',
     'delay-900',
-    'delay-1100',
-    'delay-1300',
+    'delay-1050',
   ]
 
   const { refCallbacks, isVisibleArray } = useStaggeredAnimation(
