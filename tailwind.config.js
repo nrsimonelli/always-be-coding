@@ -64,7 +64,7 @@ export default {
         },
       },
       animation: {
-        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'infinite-scroll': 'infinite-scroll 250s linear infinite',
         scanline: 'scanline 10s linear infinite',
       },
       fontFamily: {
